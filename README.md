@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://kamaladel91.github.io/"><img src="https://img.shields.io/badge/Visit_My_Portfolio-667eea?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
-  <a href="https://kamaladel91.github.io/#dashboard"><img src="https://img.shields.io/badge/Try_a_Live_Dashboard-a855f7?style=for-the-badge&logo=powerbi&logoColor=white"/></a>
+  <a href="https://kamaladel91.github.io/"><img src="./btn-portfolio.svg" height="48" alt="Visit my portfolio"/></a>
+  <a href="https://kamaladel91.github.io/#dashboard"><img src="./btn-dashboard.svg" height="48" alt="Try a live dashboard"/></a>
 </p>
 
 <p align="center">
