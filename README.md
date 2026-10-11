@@ -1,5 +1,5 @@
 <h1 align="center">Hi, I'm Kamal Adel 👋</h1>
-<h3 align="center">Business Intelligence & ERP Consultant · Frappe/ERPNext Developer</h3>
+<h3 align="center">Business Intelligence & ERP Consultant · Enterprise Systems Developer</h3>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/YOUR-LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
@@ -10,20 +10,24 @@
 ---
 
 ### 🧭 About Me
-- 📊 Accounting & tax background turned **Business Intelligence consultant**
-- 🏗️ Build and implement **ERPNext / Frappe** systems for multi-company businesses in Egypt & the Gulf (ZATCA-ready)
-- 🔄 Lead ERP migrations: **Odoo → Zoho → ERPNext**
-- 📈 Design financial dashboards in **Power BI** on top of Zoho Books & Zoho Analytics
-- ⚙️ Automate business workflows end-to-end
-- 🎓 Creating a free course on accounting, Excel, Power BI, ERP, data & AI
+- 📊 **Accounting & Finance Specialist** turned **Business Intelligence Strategist** — translating complex financial needs into intelligent systems
+- 🏗️ **Enterprise ERP Implementation** — architecting and deploying multi-company financial systems with compliance frameworks (ZATCA-ready) across Egypt & the Gulf
+- 🔄 **System Migration Expert** — leading end-to-end migrations between enterprise platforms, managing data integrity and business continuity at scale
+- 📈 **Financial Analytics & Dashboarding** — building real-time dashboards that turn raw financial data into actionable business intelligence
+- ⚙️ **Workflow Automation Specialist** — designing intelligent business process automations that reduce manual work and eliminate errors
+- 🎓 **Educator** — creating comprehensive learning content on accounting, financial analysis, business intelligence, and modern data systems
 
-### 🧩 Nexlify — My Frappe App Ecosystem
-| App | What it does |
-|-----|--------------|
-| [nexlify_multi_currency](https://github.com/KamalAdel91/nexlify_multi_currency) | Per-line currency on the same account |
-| [nexlify-reports](https://github.com/KamalAdel91/nexlify-reports) | Better report tables: sticky headers, autofit, Excel-style filters, dark mode |
-| [nexlify-tracer](https://github.com/KamalAdel91/nexlify-tracer) | Sidebar workflow tracker with stage timestamps & checklists |
-| [nexlify-hr](https://github.com/KamalAdel91/nexlify-hr) | HR features, starting with a horizontal Org Chart |
+### 💼 What I Build
+
+**Custom Financial Systems** — Designing and developing sophisticated accounting and financial control systems that handle complex multi-company, multi-currency scenarios with advanced rule-based automation and compliance validation.
+
+**Advanced Reporting Engines** — Building performance-optimized report frameworks with intelligent filtering, data visualization, and export capabilities that serve both operational and executive audiences.
+
+**Workflow Intelligence & Tracking** — Creating intelligent workflow systems that track business processes through multiple stages with real-time visibility, automated escalations, and comprehensive audit trails.
+
+**Enterprise HR Solutions** — Developing HR management systems including organizational structure visualization, employee management, and talent analytics.
+
+**Data Integration & Transformation** — Architecting seamless data flows between systems with automated validation, transformation, and reconciliation — enabling organizations to consolidate data from multiple sources into unified analytics platforms.
 
 ### 🛠️ Tech Stack
 ![Frappe](https://img.shields.io/badge/Frappe-0089FF?style=flat-square&logo=frappe&logoColor=white)
@@ -44,4 +48,4 @@
 </p>
 
 ---
-<p align="center"><i>Turning financial data into decisions 📈</i></p>
+<p align="center"><i>Turning financial complexity into intelligent, scalable solutions 📈</i></p>
