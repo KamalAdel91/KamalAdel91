@@ -1,424 +1,85 @@
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: #e0e0e0;
-    line-height: 1.6;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-  
-  /* Hero Section */
-  .hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(180deg, rgba(48,43,99,0.5), rgba(36,36,62,0.5));
-    border-radius: 20px;
-    margin-bottom: 80px;
-    animation: fadeInDown 1s ease-out;
-  }
-  
-  .hero h1 {
-    font-size: 4em;
-    margin-bottom: 10px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: slideInUp 1s ease-out;
-  }
-  
-  .hero p {
-    font-size: 1.3em;
-    color: #a0a0c0;
-    margin-bottom: 30px;
-  }
-  
-  .cta-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .btn {
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 2px solid #667eea;
-    cursor: pointer;
-  }
-  
-  .btn-primary {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-  }
-  
-  .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-  }
-  
-  .btn-secondary {
-    background: transparent;
-    color: #667eea;
-  }
-  
-  .btn-secondary:hover {
-    background: rgba(102, 126, 234, 0.1);
-    transform: translateY(-3px);
-  }
-  
-  /* Section */
-  .section {
-    margin-bottom: 80px;
-    animation: fadeIn 1s ease-out;
-  }
-  
-  .section h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #667eea;
-    border-bottom: 3px solid #667eea;
-    padding-bottom: 15px;
-    display: inline-block;
-  }
-  
-  /* Skills Grid */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
-  
-  .skill-card {
-    background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
-    padding: 30px;
-    border-radius: 15px;
-    border: 2px solid rgba(102, 126, 234, 0.2);
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .skill-card:hover {
-    transform: translateY(-10px);
-    border-color: #667eea;
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
-    background: linear-gradient(135deg, rgba(102,126,234,0.15), rgba(118,75,162,0.15));
-  }
-  
-  .skill-card h3 {
-    color: #667eea;
-    margin-bottom: 15px;
-    font-size: 1.3em;
-  }
-  
-  .skill-card p {
-    color: #b0b0d0;
-    line-height: 1.8;
-  }
-  
-  /* Projects */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
-  
-  .project-card {
-    background: linear-gradient(135deg, rgba(102,126,234,0.08), rgba(118,75,162,0.08));
-    border: 2px solid rgba(102, 126, 234, 0.15);
-    border-radius: 15px;
-    padding: 30px;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #667eea, #764ba2);
-  }
-  
-  .project-card:hover {
-    transform: translateY(-15px);
-    border-color: #667eea;
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.25);
-  }
-  
-  .project-card h3 {
-    color: #667eea;
-    margin: 15px 0;
-    font-size: 1.4em;
-  }
-  
-  .project-card p {
-    color: #a0a0c0;
-    margin-bottom: 15px;
-  }
-  
-  .tech-tags {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  
-  .tag {
-    background: rgba(102, 126, 234, 0.2);
-    color: #667eea;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.85em;
-    border: 1px solid rgba(102, 126, 234, 0.3);
-  }
-  
-  /* Stats */
-  .stats-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
-  
-  .stat-box {
-    background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
-    padding: 30px;
-    border-radius: 15px;
-    border: 2px solid rgba(102, 126, 234, 0.2);
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  
-  .stat-box:hover {
-    border-color: #667eea;
-    transform: scale(1.05);
-  }
-  
-  .stat-number {
-    font-size: 2.5em;
-    color: #667eea;
-    font-weight: bold;
-  }
-  
-  .stat-label {
-    color: #a0a0c0;
-    margin-top: 10px;
-  }
-  
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 40px 20px;
-    border-top: 2px solid rgba(102, 126, 234, 0.2);
-    margin-top: 80px;
-  }
-  
-  .footer p {
-    color: #a0a0c0;
-  }
-  
-  /* Animations */
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes slideInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-</style>
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,100:a855f7&height=180&section=header&text=Kamal%20Adel&fontSize=48&fontColor=ffffff&fontAlignY=35&desc=Business%20Intelligence%20%26%20ERP%20Consultant&descAlignY=58&descSize=18" alt="Kamal Adel"/>
+</p>
 
-<div class="container">
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>Kamal Adel</h1>
-    <p>Business Intelligence & Enterprise Systems Architect</p>
-    <p style="color: #764ba2; font-size: 0.95em;">Transforming Financial Complexity into Intelligent Solutions</p>
-    <div class="cta-buttons">
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="btn btn-primary">LinkedIn</a>
-      <a href="mailto:YOUR-EMAIL" class="btn btn-secondary">Contact Me</a>
-      <a href="https://www.facebook.com/YOUR-PAGE" class="btn btn-secondary">Mr. Excel</a>
-    </div>
-  </div>
+<p align="center">
+  <a href="https://kamaladel91.github.io/">
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&duration=3000&pause=800&color=A855F7&center=true&vCenter=true&width=600&lines=ERP+Implementation+for+Multi-Company+Groups;Systems+Integration+%26+Automation;Data+Migration+Without+Losing+History;Financial+Dashboards+That+Drive+Decisions" alt="Typing SVG"/>
+  </a>
+</p>
 
-  <!-- About Section -->
-  <div class="section">
-    <h2>👨‍💼 About Me</h2>
-    <p style="font-size: 1.1em; color: #b0b0d0; margin-top: 20px; line-height: 1.9;">
-      I'm a <strong>Financial Systems Specialist</strong> with deep expertise in designing and implementing enterprise-grade solutions. 
-      With an accounting and tax background, I've evolved into a <strong>Business Intelligence strategist</strong> who bridges the gap between 
-      complex financial needs and intelligent system architecture.<br><br>
-      I specialize in <strong>multi-company ERP implementations</strong>, <strong>system migrations</strong>, and building 
-      <strong>advanced financial analytics platforms</strong> that drive strategic decision-making for organizations across Egypt and the Gulf region.
-    </p>
-  </div>
+<p align="center">
+  <a href="https://kamaladel91.github.io/"><img src="https://img.shields.io/badge/🌐_Visit_My_Portfolio-667eea?style=for-the-badge"/></a>
+  <a href="https://kamaladel91.github.io/#dashboard"><img src="https://img.shields.io/badge/📊_Try_a_Live_Dashboard-a855f7?style=for-the-badge"/></a>
+</p>
 
-  <!-- Core Competencies -->
-  <div class="section">
-    <h2>🎯 Core Competencies</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h3>🏗️ Enterprise System Architecture</h3>
-        <p>Designing scalable multi-company financial systems with ZATCA compliance, advanced automation, and real-time reporting capabilities.</p>
-      </div>
-      <div class="skill-card">
-        <h3>🔄 System Migration & Integration</h3>
-        <p>Leading end-to-end migrations between enterprise platforms while maintaining data integrity, business continuity, and audit compliance.</p>
-      </div>
-      <div class="skill-card">
-        <h3>📊 Financial Analytics & BI</h3>
-        <p>Building intelligent dashboards and reporting frameworks that transform raw financial data into actionable business intelligence.</p>
-      </div>
-      <div class="skill-card">
-        <h3>⚙️ Workflow Automation</h3>
-        <p>Architecting intelligent business process automations that eliminate manual work, reduce errors, and enforce business rules automatically.</p>
-      </div>
-      <div class="skill-card">
-        <h3>💼 Multi-Currency & Multi-Company</h3>
-        <p>Handling complex financial scenarios across multiple legal entities, currencies, and jurisdictions with unified control and reporting.</p>
-      </div>
-      <div class="skill-card">
-        <h3>👥 Custom Development</h3>
-        <p>Building specialized solutions tailored to unique business needs using modern frameworks and best practices in software engineering.</p>
-      </div>
-    </div>
-  </div>
+<p align="center">
+  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/></a>
+  <a href="mailto:YOUR-EMAIL"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white"/></a>
+  <a href="https://wa.me/YOUR-NUMBER"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white"/></a>
+</p>
 
-  <!-- What I Build -->
-  <div class="section">
-    <h2>🛠️ What I Build</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Financial Control Systems</h3>
-        <p>Sophisticated accounting platforms with budget enforcement, policy-based validations, and real-time financial control across organizations.</p>
-        <div class="tech-tags">
-          <span class="tag">ERP Implementation</span>
-          <span class="tag">Financial Control</span>
-          <span class="tag">Automation</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <h3>Advanced Reporting Engines</h3>
-        <p>High-performance reporting frameworks with intelligent filtering, visualization, and export capabilities for operational and executive use.</p>
-        <div class="tech-tags">
-          <span class="tag">Analytics</span>
-          <span class="tag">Data Visualization</span>
-          <span class="tag">Reporting</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <h3>Workflow Intelligence</h3>
-        <p>Intelligent systems that track business processes with real-time visibility, automated escalations, and comprehensive audit trails.</p>
-        <div class="tech-tags">
-          <span class="tag">Workflow</span>
-          <span class="tag">Process Automation</span>
-          <span class="tag">Tracking</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <h3>Data Integration Platforms</h3>
-        <p>Seamless data flows between systems with automated validation, transformation, and reconciliation for unified analytics.</p>
-        <div class="tech-tags">
-          <span class="tag">Data Integration</span>
-          <span class="tag">ETL</span>
-          <span class="tag">Consolidation</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <h3>HR Management Solutions</h3>
-        <p>Comprehensive HR systems including organizational structure visualization, talent management, and analytics.</p>
-        <div class="tech-tags">
-          <span class="tag">HR Systems</span>
-          <span class="tag">Org Analytics</span>
-          <span class="tag">Talent Mgmt</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <h3>Educational Content</h3>
-        <p>Creating comprehensive learning resources on accounting, financial analysis, business intelligence, and modern data systems.</p>
-        <div class="tech-tags">
-          <span class="tag">Education</span>
-          <span class="tag">Training</span>
-          <span class="tag">Content Creation</span>
-        </div>
-      </div>
-    </div>
-  </div>
+---
 
-  <!-- Tech Stack -->
-  <div class="section">
-    <h2>⚡ Technology Stack</h2>
-    <div class="stats-container">
-      <div class="stat-box">
-        <div class="stat-number">🐍</div>
-        <div class="stat-label">Python & Backend</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">🌐</div>
-        <div class="stat-label">JavaScript & Frontend</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">🗄️</div>
-        <div class="stat-label">Database Design</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">📊</div>
-        <div class="stat-label">Business Intelligence</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">🔧</div>
-        <div class="stat-label">Enterprise Systems</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">☁️</div>
-        <div class="stat-label">Cloud Deployment</div>
-      </div>
-    </div>
-  </div>
+### 👋 About me
 
-  <!-- Footer -->
-  <div class="footer">
-    <p>Let's build something amazing together</p>
-    <p style="margin-top: 20px; font-size: 0.9em; color: #764ba2;">💼 Open to exciting projects and collaborations</p>
-  </div>
-</div>
+I started in **accounting and tax**, then moved into **business intelligence, ERP and automation**. That mix means I build systems that both the finance team and the auditors trust.
+
+I work with **multi-company groups in Egypt and Saudi Arabia**, handling multiple entities, currencies and tax regimes, including **ZATCA e-invoicing**.
+
+### 🛠️ What I do
+
+| | |
+|---|---|
+| 🏗️ **ERP implementation** | Multi-company setups, inter-company flows, approvals, permissions and tax compliance |
+| 🔄 **Data migration** | Moving between platforms with full history, reconciled line by line |
+| 🔗 **Integration** | Connecting ERP, CRM, accounting, banks and Excel through APIs and scheduled syncs |
+| ⚙️ **Automation** | Approvals, notifications, email routing and system-to-system sync |
+| 📊 **BI dashboards** | Consolidated P&L, cash, receivables and KPIs across companies and currencies |
+| 🧩 **Custom apps** | Modules for budgeting, treasury, workflow tracking, reporting and HR |
+
+### 🔁 How data flows in my projects
+
+```mermaid
+flowchart LR
+    A[🏢 ERP] --> H{{🔗 Integration<br/>APIs · Webhooks}}
+    B[📒 Accounting] --> H
+    C[🤝 CRM] --> H
+    D[🏦 Banks] --> H
+    E[📄 Excel] --> H
+    H --> F[🧹 Clean &<br/>Validate]
+    F --> G[(🧮 Data Model)]
+    G --> I[📊 Dashboard]
+```
+
+### 🧰 Tech stack
+
+<p>
+  <img src="https://img.shields.io/badge/ERPNext-0089FF?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Frappe-0089FF?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Zoho-E42527?style=for-the-badge&logo=zoho&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Odoo-714B67?style=for-the-badge&logo=odoo&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+</p>
+
+### 📈 GitHub activity
+
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=KamalAdel91&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b0b1a"/>
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KamalAdel91&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b1a"/>
+</p>
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=KamalAdel91&theme=tokyo-night&hide_border=true&bg_color=0b0b1a&color=a855f7&line=667eea&point=ffffff"/>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:a855f7,100:667eea&height=100&section=footer"/>
+</p>
