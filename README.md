@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,100:a855f7&height=180&section=header&text=Kamal%20Adel&fontSize=48&fontColor=ffffff&fontAlignY=35&desc=Business%20Intelligence%20%26%20ERP%20Consultant&descAlignY=58&descSize=18" alt="Kamal Adel"/>
+  <img src="./banner.svg" width="100%" alt="Kamal Adel"/>
 </p>
 
 <p align="center">
@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://kamaladel91.github.io/"><img src="https://img.shields.io/badge/🌐_Visit_My_Portfolio-667eea?style=for-the-badge"/></a>
-  <a href="https://kamaladel91.github.io/#dashboard"><img src="https://img.shields.io/badge/📊_Try_a_Live_Dashboard-a855f7?style=for-the-badge"/></a>
+  <a href="https://kamaladel91.github.io/"><img src="https://img.shields.io/badge/Visit_My_Portfolio-667eea?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
+  <a href="https://kamaladel91.github.io/#dashboard"><img src="https://img.shields.io/badge/Try_a_Live_Dashboard-a855f7?style=for-the-badge&logo=powerbi&logoColor=white"/></a>
 </p>
 
 <p align="center">
@@ -78,8 +78,4 @@ flowchart LR
 </p>
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=KamalAdel91&theme=tokyo-night&hide_border=true&bg_color=0b0b1a&color=a855f7&line=667eea&point=ffffff"/>
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:a855f7,100:667eea&height=100&section=footer"/>
 </p>

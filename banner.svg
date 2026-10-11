@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0b1a"/>
+      <stop offset="1" stop-color="#1a1440"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0" x2="1">
+      <stop offset="0" stop-color="#667eea"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" x2="1">
+      <stop offset="0" stop-color="#667eea" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity=".55"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <rect width="1200" height="260" rx="22" fill="url(#bg)"/>
+
+  <!-- network dots -->
+  <g fill="#667eea" opacity=".5">
+    <circle cx="90" cy="60" r="3"/><circle cx="180" cy="120" r="2.5"/><circle cx="60" cy="190" r="2"/>
+    <circle cx="1100" cy="55" r="3"/><circle cx="1020" cy="140" r="2.5"/><circle cx="1140" cy="200" r="2"/>
+  </g>
+  <g stroke="#667eea" stroke-opacity=".2" stroke-width="1">
+    <line x1="90" y1="60" x2="180" y2="120"/><line x1="180" y1="120" x2="60" y2="190"/>
+    <line x1="1100" y1="55" x2="1020" y2="140"/><line x1="1020" y1="140" x2="1140" y2="200"/>
+  </g>
+
+  <!-- moving data packet -->
+  <circle r="4" fill="#a855f7" filter="url(#glow)">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M60,190 L180,120 L90,60"/>
+  </circle>
+  <circle r="4" fill="#22d3ee" filter="url(#glow)">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M1140,200 L1020,140 L1100,55"/>
+  </circle>
+
+  <text x="600" y="118" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="64" font-weight="800" fill="url(#txt)">Kamal Adel</text>
+  <text x="600" y="162" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#c7c9e0">Business Intelligence &amp; ERP Consultant</text>
+  <text x="600" y="196" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#8a8cab">Egypt &amp; the Gulf  ·  ERP  ·  Integration  ·  Automation  ·  Dashboards</text>
+
+  <!-- bottom wave -->
+  <path fill="url(#wave)" d="M0,235 C200,215 400,255 600,235 C800,215 1000,255 1200,235 L1200,260 L0,260 Z">
+    <animate attributeName="d" dur="7s" repeatCount="indefinite"
+      values="M0,235 C200,215 400,255 600,235 C800,215 1000,255 1200,235 L1200,260 L0,260 Z;
+              M0,240 C200,255 400,215 600,240 C800,255 1000,215 1200,240 L1200,260 L0,260 Z;
+              M0,235 C200,215 400,255 600,235 C800,215 1000,255 1200,235 L1200,260 L0,260 Z"/>
+  </path>
+</svg>
